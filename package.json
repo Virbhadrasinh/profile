@@ -1,0 +1,49 @@
+{
+    "name": "iv-sales-ui",
+    "version": "150.0.0",
+    "private": true,
+    "dependencies": {
+        "less": "~1.7.5",
+        "csso": "~2.1.1",
+        "docco": "~0.7.0",
+        "jsdoc": "~3.4.0",
+        "fs-sync": "~1.0.2",
+        "fs-extra": "~0.26.7",
+        "shelljs-nodecli": "~0.1.1",
+        "serve-static": "~1.11.1",
+        "finalhandler": "~0.5.0",
+        "jslint": "~0.9.6",
+        "html-minifier": "~3.0.1"
+    },
+    "scripts": {
+        "jslint": "node scripts/build/lint-test",
+        "build": "node scripts/build/build-ui",
+        "docs": "node scripts/build/doc-creator",
+        "delete": "node scripts/build/deleteUnwantedFiles",
+        "test": "node scripts/build/test/run-test",
+        "test-reports": "phantomjs scripts/test-automation/generate-reports.js",
+        "serve": "node scripts/server2.js",
+        "extractLocalizationStrings": "node scripts/build/extract-localization-strings",
+        "generateLocalizationFolder": "node scripts/build/generate-localization-folder",
+        "csvRead": "node scripts/build/sample",
+        "mocha-test": "mocha-chrome test/setup/html/console-test.html --timeout=20000 --log-level=trace --chrome-flags='[\"--disable-web-security\"]'"
+    },
+    "project-dependencies": {
+        "sdk": "160.0.0",
+        "ivs-mashup": "160.0.0",
+        "ivs-standalone": "160.0.0",
+        "ivs-mscrm-mashup": "160.0.0",
+        "ivs-mscrm-standalone": "160.0.0",
+        "ivs-mscrm": "160.0.0",
+        "ivs-mscrm-uci": "160.0.0",
+        "hoc-iv-results": "158.0.0",
+        "hoc-authentication": "157.0.0",
+        "hoc-market-segment-list": "159.0.0"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^5.2.0",
+        "mocha-chrome": "^1.1.0",
+        "sinon": "^6.1.0"
+    }
+}
