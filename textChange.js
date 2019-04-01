@@ -1,11 +1,3 @@
-/*!
- * jquery.typer.js 0.0.4 - https://github.com/yckart/jquery.typer.js
- * The typewriter effect
- *
- * Copyright (c) 2013 Yannick Albert (http://yckart.com)
- * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
- * 2013/03/24
-*/
 (function($){
     $.fn.textChange = function(text, options){
         options = $.extend({}, {
