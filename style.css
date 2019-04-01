@@ -395,8 +395,6 @@ Home
     color: #fafafa;
 }
 
-
-
 /*----------------------------------------
 About
 ----------------------------------------*/
@@ -450,93 +448,203 @@ About
 	padding: 20px 0;
 	padding-left: 10px;
 	padding-right: 10px;
+	border-left: 1px solid #dfdfdf;
+	margin-top: 60px;
+	height: 272px;
+    padding-left: 30px !important;
 }
-.progress-bar-linear {
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+.key-focus-area {
+	margin-bottom: 15px;
 }
-.progress-bar-text {
-    display: inline-block;
-    margin-left: 8px;
-    margin-bottom: 6px;
-    font-size: 13px;
-    font-weight: 700;
-}
-.progress-cont {
-    display: inline-block;
-    float: right;
-    margin-right: 10px;
-}
-.progress-bar-linear .progress-bar-skills {
+
+.key-focus-area-icon {
+	vertical-align: middle;
     position: relative;
-    width: 100%;
-    background-color: #dfdfdf;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
+    top: -1px;
 }
-.progress-bar-skills .progress-bar-line {
-    position: relative;
-    width: 5%;
-    height: 6px;
-    background-color: #4f4f4f;
-    -webkit-transition: all 1.6s ease-out;
-    -o-transition: all 1.6s ease-out;
-    -moz-transition: all 1.6s ease-out;
-    transition: all 1.6s ease-out;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
+
+.key-focus-area-text {
+    padding-left: 5px;
+    font-size: 16px;
 }
 
 
 /*----------------------------------------
-Services
+Career
 ----------------------------------------*/
-.single-service {
-	padding: 10px;
-	text-align: center;
+
+#timeline .timeline-item:after, #timeline .timeline-item:before {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
 }
-.single-service.bordered {
-	border-right: none;
-	border-left: none;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
-.clear-float {
-	clear: both !important;
+
+
+#timeline {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-.services-separator {
-	display: none;
-	width: 100%;
-	margin: 15px auto;
-	height: 1px;
-	background: #dfdfdf;
+
+#timeline:before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #333;
+  left: 50%;
+  top: 0;
+  position: absolute;
 }
-.service-icon .fa {
-    font-size: 44px;
-    line-height: 70px;
+#timeline:after {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
 }
-.single-service:hover .service-icon .fa {
-    -webkit-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    transform: rotateY(360deg);
+#timeline .timeline-item {
+  margin-bottom: 50px;
+  position: relative;
 }
-.service-content h3 {
-	font-size: 19px;
-    margin-top: 15px;
-    margin-bottom: 0;
-    font-weight: 700;
+#timeline .timeline-item .timeline-icon {
+  background: #333;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  margin-left: -23px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
 }
-.s-line {
-	margin: 12px auto 0;
-    width: 55px;
-    height: 1px;
-    background-color: #333;
+#timeline .timeline-item .timeline-icon svg {
+  position: relative;
+  top: 14px;
+  left: 14px;
 }
-.single-service p {
-    margin-top: 12px;
-    font-size: 14px;
+#timeline .timeline-item .timeline-content {
+  width: 45%;
+  background: #fff;
+  padding: 20px;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(51,51,51,1);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(51,51,51,1);
+  box-shadow: 0px 1px 5px 0px rgba(51,51,51,1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
+#timeline .timeline-item .timeline-content h2 {
+  padding: 15px;
+  background: #333;
+  color: #fafafa;
+  font-size: 18px;
+  margin: -20px -20px 0 -20px;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+#timeline .timeline-item .timeline-content:before {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #333;
+}
+#timeline .timeline-item .timeline-content.right {
+  float: right;
+}
+#timeline .timeline-item .timeline-content.right:before {
+  content: '';
+  right: 45%;
+  left: inherit;
+  border-left: 0;
+  border-right: 7px solid #333;
+}
+
+.timeline-icon {
+	background:#FFF !important;
+    border: 2px solid #333;
+}
+
+.iv_logo {
+	background-color: #FFF;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 3px;
+    top: 2.5px;
+}
+
+.pramati_logo {
+    background-color: #FFF;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 7px;
+    top: 3px;
+}
+
+.ve_logo {
+    background-color: #FFF;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  #timeline {
+    margin: 30px;
+    padding: 0px;
+    width: 90%;
+  }
+  #timeline:before {
+    left: 0;
+  }
+  #timeline .timeline-item .timeline-content {
+    width: 90%;
+    float: right;
+  }
+  #timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
+    left: 10%;
+    margin-left: -6px;
+    border-left: 0;
+    border-right: 7px solid #333;
+  }
+  #timeline .timeline-item .timeline-icon {
+    left: 0;
+  }
+}
+
+
+
 
 
 /*----------------------------------------
@@ -901,6 +1009,19 @@ Footer
 /*----------------------------------------
 Mediaqueries
 ----------------------------------------*/
+@media screen 
+	and (min-width: 400px) 
+	and (max-width: 992px) {
+	
+	.skills-section {
+		padding-left: 20px;
+		border-left: 0;
+    	margin-top: 0;
+		padding-left: 16px !important;
+		height: auto;
+	}
+}
+
 @media screen and (min-width: 768px) {
 
 	.nav-wrapper {
@@ -939,11 +1060,6 @@ Mediaqueries
 }
 
 @media (min-width: 992px) {
-
-	.skills-section {
-		padding-left: 20px;
-	}
-
 	.single-service.bordered {
 		border-right: 1px solid #dfdfdf;
 		border-left: 1px solid #dfdfdf;
@@ -951,7 +1067,6 @@ Mediaqueries
 	.services-separator {
 		display: block;
 	}
-
 }
 
 

@@ -118,7 +118,7 @@ $(function(){
 
     // initialize Smooth Scrolling Only in Modern browsers
     if(animation) {
-    	jQuery.scrollSpeed(100, 700);
+    	jQuery.scrollSpeed(100, 1000);
     }
 
 
@@ -217,10 +217,7 @@ $(function(){
                 var item = $(this);
                 item.find("a").removeClass("active");
               });
-              
               var id = section.attr('id');
-              debugger;
-              
               navList.find('li [href="#' + id + '"]').addClass('active');
             }
 
