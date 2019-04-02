@@ -11,7 +11,7 @@ http.createServer(function(req, res) {
 	if(req.url.lastIndexOf("/site") >=0) {
 		res.writeHead(200, {"Content-Type" : "text/html"});
 		///Users/virbhadrasinh/Vir/Personal/Vir
-		res.end(fs.readFileSync(__dirname + "/site.html"));
+		res.end(fs.readFileSync(__dirname + "/index.html"));
 	}else {
 		var done = finalhandler(req, res);
 		serve(req, res, done);
