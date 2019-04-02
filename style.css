@@ -195,7 +195,7 @@ Pre Loader
 Navigation
 ----------------------------------------*/
 .nav-wrapper {
-	width: 100%;
+	width: 100vw;
 	padding: 6px 0;
 	position: fixed;
 	top: 0;
