@@ -265,11 +265,10 @@ Call Function on Window Scroll
         Username : "vir.18.newsletter@gmail.com",
         Password : "6fa1324f-7f39-42c2-813d-fc0dc25ea75e",
         To : 'chauhanvirbhadrasinh@gmail.com',
-        From : $('#email').val(),
-        Subject : $('#name').val() + "wants to connect you",
+        From : "vir.18.newsletter@gmail.com",
+        Subject : $('#name').val() + " ("+ $('#email').val() +") wants to connect you",
         Body : $('#message').val()
     }).then(function(message) {
-      debugger;
       if("OK" === message) {
         formMessages.removeClass('error');
         formMessages.addClass('success');
