@@ -224,4 +224,68 @@ Call Function on Window Scroll
     stikyNav();
     ChangeClass();
   });
+/*------------------------------------------------------------------------
+ Validate and Submit the CONTACT Form Using AJAX
+-------------------------------------------------------------------------*/
+  var form = $('#contact-form'),
+      reg = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{3,4})$/,
+      inputs = $(".input-field"),
+      formMessages = $('#form-message');
+
+  function validateForm() {
+    if ($(this).is("#email")) {
+      var email = $(this).val(),
+        res = reg.test(email);
+      if (res) {
+        $(".email-error").html("");
+      } else {
+        $(".email-error").html("please enter a valid email.");
+        return false;
+      }
+    } else {
+      var target = ($(this).attr("id")),
+        targetMessage = $("." + target + "-error");
+      if ($(this).val() === "") {
+        targetMessage.html("please enter a valid " + target + ".");
+        return false;
+      } else {
+        targetMessage.html(" ");
+      }
+    }
+  }
+
+  $.each(inputs, function (i, val) {
+    $(this).on("blur", validateForm);
+  });
+  
+  $(form).on('submit',function(event) {
+    event.preventDefault();
+      Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "vir.18.newsletter@gmail.com",
+        Password : "6fa1324f-7f39-42c2-813d-fc0dc25ea75e",
+        To : 'chauhanvirbhadrasinh@gmail.com',
+        From : $('#email').val(),
+        Subject : $('#name').val() + "wants to connect you",
+        Body : $('#message').val()
+    }).then(function(message) {
+      debugger;
+      if("OK" === message) {
+        formMessages.removeClass('error');
+        formMessages.addClass('success');
+        formMessages.text('Thank you for your email. I will do my best to respond promptly to your email.');
+        formMessages.show();
+        setTimeout(function(){formMessages.text('').hide();},5000);
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+      } else {
+        formMessages.removeClass('success');
+        formMessages.addClass('error');
+        formMessages.show();
+        formMessages.text('Sorry! An error occured and your message could not be sent.');
+        setTimeout(function(){formMessages.text('').hide();},5000);
+      }
+    });
+  });
 });
