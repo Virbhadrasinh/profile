@@ -25,7 +25,7 @@ On page load events
   var text = $('#home .text-change-title'),
       textOne = "let's work together",
       textTwo = "for Bridging Business Problems & Technology Solutions",
-      textThree = "i can hekp in ",
+      textThree = "i can help in ",
       textFour = "architecting and building applications & ",
       textFive = "Forward Planning for delivering projects on time";
 
