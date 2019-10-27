@@ -3,7 +3,7 @@
         options = $.extend({}, {
             char: '',
             delay: 1000,
-            duration: 800,
+            duration: 500,
             endless: true,
             onType: $.noop,
             afterAll: $.noop,
