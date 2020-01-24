@@ -23,14 +23,14 @@ On page load events
   Initialize text change
 --------------------------------------------*/
   var text = $('#home .text-change-title'),
-      textOne = "let's work together",
-      textTwo = "for Bridging Business Problems & Technology Solutions",
+      //textOne = "let's work together",
+      //textTwo = "for Bridging Business Problems & Technology Solutions",
       textThree = "i can help in ",
-      textFour = "architecting and building applications & ",
+      textFour = "architecting and building web applications & ",
       textFive = "Forward Planning for delivering projects on time";
 
   if (!!$.prototype.textChange) {
-    text.textChange([textOne,textTwo,textThree, textFour, textFive]);
+    text.textChange([textThree, textFour, textFive]);
   }
 /*----------------------------------------------------------------------
  Initialize Particules
