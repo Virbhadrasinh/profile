@@ -309,14 +309,20 @@ Home
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.52);
 }
 #home h1 {
-	font-size: 34px;
-	margin: 36px 0 22px;
-	color: #fff;
-	padding: 0px 5px;
+	margin: 36px 0 0;
+    color: #fff;
+    padding: 0px 5px;
 }
+
+#home h2 {
+	font-size: 25px;
+    margin: 10px 0 10px;
+    color: #fff;
+    padding: 0px 5px;
+}
+
 #home .text-change-title {
 	margin: 10px 0;
-	font-size: 22px;
 	color: #bfbfbf;
 	text-transform: uppercase;
 }
@@ -845,7 +851,7 @@ Mediaqueries
 		font-size: 50px;
 	}
 	#home .text-change-title {
-		font-size: 26px;
+		font-size: 18px;
 	}
 
 	.home-slider-btn {
