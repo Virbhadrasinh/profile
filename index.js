@@ -21,8 +21,8 @@ On page load events
   });
 /*------------------------------------------
   Initialize text change
---------------------------------------------*/
-  var text = $('#home .text-change-title'),
+--------------------------------------------
+  /*var text = $('#home .text-change-title'),
       //textOne = "let's work together",
       //textTwo = "for Bridging Business Problems & Technology Solutions",
       textThree = "i can help in ",
@@ -31,7 +31,7 @@ On page load events
 
   if (!!$.prototype.textChange) {
     text.textChange([textThree, textFour, textFive]);
-  }
+  }*/
 /*----------------------------------------------------------------------
  Initialize Particules
 -----------------------------------------------------------------------*/
