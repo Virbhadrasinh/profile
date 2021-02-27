@@ -17,7 +17,7 @@ On page load events
     $('html, body').animate({
       scrollTop: 0
     }, 500);
-    $('.copy-text').html("Virbhadrasinh © " + new Date().getFullYear() + ". all right reserved.");
+    //$('.copy-text').html("Virbhadrasinh © " + new Date().getFullYear() + ". all right reserved.");
   });
 /*------------------------------------------
   Initialize text change
@@ -210,13 +210,16 @@ Call Function on Window Scroll
           section_top = section.offset().top - 10,
           bottom = section_top + section.height();
 
-      if (top >= section_top && top <= bottom) {
+      function makeLinkActive(currentSection) {
         var naItems = navList.find('li');
         $.each(naItems ,function(i,val) {
           var item = $(this);
           item.find("a").removeClass("active");
         });
-        navList.find('li [href="#' + section.attr('id') + '"]').addClass('active');
+        navList.find('li [href="#' + currentSection.attr('id') + '"]').addClass('active');
+      }
+      if (top >= section_top && top <= bottom) {
+        makeLinkActive(section);
       }
     });
   } 
